@@ -7,23 +7,17 @@ def quiz
   #  puts "strand id = #{x}"
   #  x++
   #end
-  #if @question_amount < 1
-  #  "Please enter a positive number"
-  #  questions
-  #elsif @question_amount.is_a?(String) == true
-  #  "Please enter a number"
-  #  questions
-  #else
-  #  puts @question_amount
-  #end
 
   #puts strand_id
-  question_amount = 1
   puts "How many questions would you like to answer?"
   question_amount = gets.chomp.to_i
 
   while question_amount < 1
     puts "Number must be positive"
+    question_amount = gets.chomp.to_i
+  end
+  if question_amount.is_a?(String) == true
+    puts "Must be a number"
     question_amount = gets.chomp.to_i
   end
 end
